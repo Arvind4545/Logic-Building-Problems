@@ -1,12 +1,27 @@
 
-
 /*
-Row =  4 
-col = 4 
+rows = 6 
+Col = 6 
 
-    
+$ $ $ $  $ $ 
+* * * *  * * 
+* * * *  * * 
+* * * *  * * 
+* * * *  * * 
+$ $ $ $ $ $ 
 
-*/ 
+*/
+
+/* 
+Row = 4 
+Col =  4
+
+# 1 1 1 
+2 # 2 2 
+3 3 # 3 
+4 4 4 # 
+
+*/
 
 #include<stdio.h>
 
@@ -26,28 +41,22 @@ void Display(int iRows , int Cols )
 
     for( i = 1 ; i<= iRows ; i++ )
     {
-        for(j = 1 ; j<= Col ; j++ )
+        for(j = 1 ; j<= Cols ; j++ )
         {
-            if(i>j)
+            if((i == 1)|| (i == iRows) )
             {
-                printf("*\t") ;
-            }
-            else if(i == j )
-            {
-                printf("&\t") ;
+                printf("#\t") ;
             }
             else 
             {
-                printf("$") ;
+                printf("*\t",i) ;
             }
         }
         printf("\n") ;
 
     }
-    
-    
-
 }
+
 int main()
 {
     int iValue1 = 0 ;

@@ -1,10 +1,12 @@
 
-
 /*
 Row =  4 
 col = 4 
 
-    
+1 * * * 
+* 2 * * 
+* * 3 * 
+* * * 4 
 
 */ 
 
@@ -14,7 +16,6 @@ void Display(int iRows , int Cols )
 {
     int i = 0 ;
     int j = 0 ;
-    int iNo = 0 ;
 
     if(iRows != Cols) //Filter 
     {
@@ -26,25 +27,19 @@ void Display(int iRows , int Cols )
 
     for( i = 1 ; i<= iRows ; i++ )
     {
-        for(j = 1 ; j<= Col ; j++ )
+        for(j = 1 ; j<= Cols ; j++ )
         {
-            if(i>j)
+            if(i == j )
             {
-                printf("*\t") ;
-            }
-            else if(i == j )
-            {
-                printf("&\t") ;
+                printf("%d\t",i) ;
             }
             else 
             {
-                printf("$") ;
+                printf("*\t") ;
             }
         }
         printf("\n") ;
-
     }
-    
     
 
 }

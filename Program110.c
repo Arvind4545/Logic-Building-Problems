@@ -26,25 +26,16 @@ void Display(int iRows , int Cols )
 
     for( i = 1 ; i<= iRows ; i++ )
     {
-        for(j = 1 ; j<= Col ; j++ )
+        if(i == j )
         {
-            if(i>j)
-            {
-                printf("*\t") ;
-            }
-            else if(i == j )
-            {
-                printf("&\t") ;
-            }
-            else 
-            {
-                printf("$") ;
-            }
+            printf("@\t") ;
         }
-        printf("\n") ;
-
+        else 
+        {
+            printf("%d\t",j) ;
+        }
     }
-    
+    printf("\n") ;
     
 
 }

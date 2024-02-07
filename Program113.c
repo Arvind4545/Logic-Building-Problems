@@ -4,6 +4,10 @@
 Row =  4 
 col = 4 
 
+& $ $ $ 
+* & $ $ 
+* * & $ 
+* * * & 
     
 
 */ 
@@ -26,7 +30,7 @@ void Display(int iRows , int Cols )
 
     for( i = 1 ; i<= iRows ; i++ )
     {
-        for(j = 1 ; j<= Col ; j++ )
+        for(j = 1 ; j<= Cols ; j++ )
         {
             if(i>j)
             {
@@ -38,16 +42,14 @@ void Display(int iRows , int Cols )
             }
             else 
             {
-                printf("$") ;
+                printf("$\t") ;
             }
         }
         printf("\n") ;
 
     }
-    
-    
-
 }
+
 int main()
 {
     int iValue1 = 0 ;

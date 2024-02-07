@@ -1,12 +1,24 @@
 
-
 /*
-Row =  4 
-col = 4 
+rows = 6 
+Col = 6 
 
-    
+   $ $ $ $ $ $ 
+   $         $ 
+   $         $ 
+   $         $ 
+   $         $ 
+   $ $ $ $ $ $ 
 
-*/ 
+
+*/
+
+/* 
+Row = 4 
+Col =  4
+
+
+*/
 
 #include<stdio.h>
 
@@ -14,40 +26,25 @@ void Display(int iRows , int Cols )
 {
     int i = 0 ;
     int j = 0 ;
-    int iNo = 0 ;
-
-    if(iRows != Cols) //Filter 
-    {
-        printf("Row Number and Column Numbers are Different\n") ;
-        return ; 
-    
-    }
-
 
     for( i = 1 ; i<= iRows ; i++ )
     {
-        for(j = 1 ; j<= Col ; j++ )
+        for(j = 1 ; j<= Cols ; j++ )
         {
-            if(i>j)
+            if((i == 1)|| (i == iRows ) || (j == 1 ) || (j == Cols))
             {
-                printf("*\t") ;
-            }
-            else if(i == j )
-            {
-                printf("&\t") ;
+                printf("$\t") ;
             }
             else 
             {
-                printf("$") ;
+                printf(" \t",i) ;
             }
         }
         printf("\n") ;
 
     }
-    
-    
-
 }
+
 int main()
 {
     int iValue1 = 0 ;
